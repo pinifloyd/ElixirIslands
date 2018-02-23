@@ -19,7 +19,7 @@ defmodule IslandsEngine.Island do
     "[" <> coordinate_strings(island) <> "]"
   end
 
-  def coordinate_string(island) do
+  def coordinate_strings(island) do
     island
     |> Agent.get(fn state -> state end)
     |> Enum.map(fn coord -> Coordinate.to_string(coord) end)
